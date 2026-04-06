@@ -15,6 +15,7 @@ from app.billing import (
     handle_webhook_event,
     get_checkout_result,
 )
+from app.blog import router as blog_router
 
 settings = get_settings()
 
@@ -25,6 +26,8 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
 )
+
+app.include_router(blog_router)
 
 
 class ExtractionResponse(BaseModel):
