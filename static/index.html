@@ -315,7 +315,8 @@ GET /extract?url=https://paulgraham.com/persistence.html
                         <li>JS rendering included</li>
                         <li>Priority support</li>
                     </ul>
-                    <a href="/docs" class="btn btn-primary" style="width:100%;text-align:center;">Start free trial</a>
+                    <a href="/billing/checkout" class="btn btn-primary" style="width:100%;text-align:center;" onclick="event.preventDefault(); document.getElementById('checkout-form').submit();">Get Pro</a>
+                    <form id="checkout-form" method="POST" action="/billing/checkout" style="display:none;"></form>
                 </div>
             </div>
         </div>
